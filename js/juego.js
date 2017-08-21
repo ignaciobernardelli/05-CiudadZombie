@@ -20,8 +20,28 @@ var Juego = {
   obstaculosCarretera: [
     /*Aca se van a agregar los obstaculos visibles. Tenemos una valla horizontal
     de ejemplo, pero podras agregar muchos mas. */
-    new Obstaculo('imagenes/valla_horizontal.png', 70, 430, 30, 30, 1)
-
+    new Obstaculo('imagenes/valla_horizontal.png', 70, 430, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 100, 430, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 130, 430, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 120, 70, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 150, 70, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 750, 230, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 780, 230, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 500, 210, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 530, 210, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 530, 210, 30, 30, 1),
+    new Obstaculo('imagenes/valla_vertical.png', 450, 450, 30, 30, 1),
+    new Obstaculo('imagenes/valla_vertical.png', 450, 480, 30, 30, 1),
+    new Obstaculo('imagenes/valla_vertical.png', 300, 240, 30, 30, 1),
+    new Obstaculo('imagenes/valla_vertical.png', 730, 130, 30, 30, 1),
+    new Obstaculo('imagenes/bache.png', 100, 280, 30, 30, 1),
+    new Obstaculo('imagenes/bache.png', 300, 400, 30, 30, 1),
+    new Obstaculo('imagenes/bache.png', 430, 80, 30, 30, 1),
+    new Obstaculo('imagenes/bache.png', 850, 400, 30, 30, 1),
+    new Obstaculo('imagenes/auto_verde_abajo.png', 180, 230, 15, 30, 1),
+    new Obstaculo('imagenes/auto_verde_abajo.png', 870, 160, 15, 30, 1),
+    new Obstaculo('imagenes/auto_verde_derecha.png', 250, 500, 30, 15, 1),
+    new Obstaculo('imagenes/auto_verde_derecha.png', 590, 140, 30, 15, 1)
   ],
   /* Estos son los bordes con los que se puede chocar, por ejemplo, la vereda.
    Ya estan ubicados en sus lugares correspondientes. Ya aparecen en el mapa, ya
@@ -145,6 +165,7 @@ Juego.capturarMovimiento = function(tecla) {
     var newX = movX + this.jugador.x;
     var newY = movY + this.jugador.y;
     Jugador.mover(newX,newY);
+
     }
 };
 
@@ -214,7 +235,8 @@ Juego.chequearColisiones = function(x, y) {
     if (this.intersecan(obstaculo, this.jugador, x, y)) {
 
       /*COMPLETAR, obstaculo debe chocar al jugador*/
-
+      obstaculo.chocar(Jugador);
+      obstaculo.potencia = 0;
       puedeMoverse = false
     }
   }, this)
