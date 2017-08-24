@@ -64,8 +64,7 @@ var Juego = {
   ],
   // Los enemigos se agregaran en este arreglo.
   enemigos: [
-
-  ]
+    ]
 
 }
 
@@ -241,7 +240,6 @@ Juego.chequearColisiones = function(x, y) {
 
       /*COMPLETAR, obstaculo debe chocar al jugador*/
       obstaculo.chocar();
-      obstaculo.potencia = 0;
       puedeMoverse = false
     }
   }, this)
