@@ -32,7 +32,7 @@ Enemigo.prototype.atacar = function (jugador) {
 
 /* Este metodo sirve para no estar atacando continuamente al jugador. Solo va a
 atacar si no estaba atacando previamente. Esto lo va a indicar la propiedad atacando*/
-Enemigo.prototype.comenzarAtaque = function (jugador) {
+Enemigo.comenzarAtaque = function (jugador) {
   if (!this.atacando) {
     this.atacar(jugador);
   }

@@ -9,7 +9,6 @@ var ZombieConductor = function(sprite, x, y, ancho, alto, velocidad, rangoMov, d
   Enemigo.call(this, sprite, x, y, ancho, alto, velocidad, rangoMov, direccion)//Enemigo.call(/* ... */);
   /* No olvidar agregar la/s propiedad/es unicas de ZombieConductor necesarias */
   this.direccion = direccion;
-  this.matar = function(){};
 }
 
 /* Completar creacion del ZombieConductor */

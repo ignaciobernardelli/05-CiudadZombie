@@ -64,14 +64,14 @@ var Juego = {
   ],
   // Los enemigos se agregaran en este arreglo.
   enemigos: [
-    new ZombieCaminante('imagenes/zombie4.png', 350, 430, 10, 10, 1,{desdeX: 50,hastaX: 100, desdeY: 50, hastaY: 100}),
-    new ZombieCaminante('imagenes/zombie4.png', 230, 540, 10, 10, 2,{desdeX: 60,hastaX: 120, desdeY: 60, hastaY: 120}),
-    new ZombieCaminante('imagenes/zombie4.png', 120, 240, 10, 10, 2,{desdeX: 70,hastaX: 130, desdeY: 70, hastaY: 130}),
-    new ZombieCaminante('imagenes/zombie4.png', 50, 350, 10, 10, 3,{desdeX: 80,hastaX: 140, desdeY: 80, hastaY: 140}),
-    new ZombieCaminante('imagenes/zombie4.png', 70, 550, 10, 10, 3,{desdeX: 90,hastaX: 150, desdeY: 90, hastaY: 150}),
-    new ZombieConductor('imagenes/zombie4.png', 644, 0, 30, 90, 3,{desdeX: 0,hastaX: 644, desdeY: 0, hastaY: 150},"vertical"),
-    new ZombieConductor('imagenes/zombie4.png', 678, 0, 30, 90, 3,{desdeX: 0,hastaX: 644, desdeY: 0, hastaY: 150},"vertical"),
-    new ZombieConductor('imagenes/zombie4.png', 400, 322, 90, 30, 3,{desdeX: 0,hastaX: 400, desdeY: 0, hastaY: 322},"horizontal")
+    new ZombieCaminante('imagenes/zombie4.png', 350, 430, 10, 10, 1,{desdeX: 50,hastaX:100,desdeY:50,hastaY:100}),
+    //new ZombieCaminante('imagenes/zombie4.png', 230, 540, 10, 10, 2,{desdeX: 60,hastaX: 120, desdeY: 60, hastaY: 120}),
+    //new ZombieCaminante('imagenes/zombie4.png', 120, 240, 10, 10, 2,{desdeX: 70,hastaX: 130, desdeY: 70, hastaY: 130}),
+    //new ZombieCaminante('imagenes/zombie4.png', 50, 350, 10, 10, 3,{desdeX: 80,hastaX: 140, desdeY: 80, hastaY: 140}),
+    //new ZombieCaminante('imagenes/zombie4.png', 70, 550, 10, 10, 3,{desdeX: 90,hastaX: 150, desdeY: 90, hastaY: 150}),
+    //new ZombieConductor('imagenes/zombie4.png', 644, 0, 30, 90, 3,{desdeX: 0,hastaX: 644, desdeY: 0, hastaY: 150},"vertical"),
+    //new ZombieConductor('imagenes/zombie4.png', 678, 0, 30, 90, 3,{desdeX: 0,hastaX: 644, desdeY: 0, hastaY: 150},"vertical"),
+    //new ZombieConductor('imagenes/zombie4.png', 400, 322, 90, 30, 3,{desdeX: 0,hastaX: 400, desdeY: 0, hastaY: 322},"horizontal")
   ]
 }
 
@@ -218,7 +218,7 @@ un recorrido por los enemigos para dibujarlos en pantalla ahora habra que hacer
 una funcionalidad similar pero para que se muevan.*/
 Juego.moverEnemigos = function() {
   this.enemigos.forEach(function(enemigo) {
-    Dibujante.moverEnemigos(enemigo);
+    ZombieCaminante.prototype.mover();
   });
 };
 
@@ -228,20 +228,16 @@ Para chequear las colisiones estudiar el metodo posicionValida. Alli
 se ven las colisiones con los obstaculos. En este caso sera con los zombies. */
 Juego.calcularAtaques = function() {
   this.enemigos.forEach(function(enemigo) {
-    if (intersecan(enemigo, this.jugador, this.jugador.x, this.jugador.y)) {
+    if (this.intersecan(enemigo, this.jugador, this.jugador.x, this.jugador.y)) {
     /* Si el enemigo colisiona debe empezar su ataque
       COMPLETAR */
-      Enemigo.prototype.atacar = function (jugador) {
-        jugador.perderVidas(1);
-      }
+    //  enemigo.atacar(this.jugador);
     } else {
       /* Sino, debe dejar de atacar
       COMPLETAR */
-      Enemigo.prototype.dejarDeAtacar = function () {
-        this.atacando = false;
-      }
+      //enemigo.dejarDeAtacar();
     }
-  }, this);
+  }, this)
 };
 
 
