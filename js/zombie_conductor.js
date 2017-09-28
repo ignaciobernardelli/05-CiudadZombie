@@ -6,7 +6,7 @@ del ZombieCaminante que eran los mismos. */
 
 var ZombieConductor = function(sprite, x, y, ancho, alto, velocidad, rangoMov, direccion/*, parametro/s extra de ZombieConductor*/) {
   /* Completar constructor a partir de Enemigo */
-  Enemigo.call(this, sprite, x, y, ancho, alto, velocidad, rangoMov)//Enemigo.call(/* ... */);
+  Enemigo.call(this, sprite, x, y, ancho, alto, velocidad, rangoMov, direccion)//Enemigo.call(/* ... */);
   /* No olvidar agregar la/s propiedad/es unicas de ZombieConductor necesarias */
   this.direccion = direccion;
   this.matar = function(){};
