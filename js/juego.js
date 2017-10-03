@@ -20,22 +20,22 @@ var Juego = {
   obstaculosCarretera: [
     /*Aca se van a agregar los obstaculos visibles. Tenemos una valla horizontal
     de ejemplo, pero podras agregar muchos mas. */
-    new Obstaculo('imagenes/valla_horizontal.png', 70, 430, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 100, 430, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 130, 430, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 120, 70, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 150, 70, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 750, 230, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 780, 230, 30, 30, 2),
-    new Obstaculo('imagenes/valla_horizontal.png', 500, 210, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 30, 430, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 60, 430, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 90, 430, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 100, 70, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 130, 70, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 740, 260, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 770, 260, 30, 30, 2),
+    new Obstaculo('imagenes/valla_horizontal.png', 560, 210, 30, 30, 2),
     new Obstaculo('imagenes/valla_horizontal.png', 530, 210, 30, 30, 2),
     new Obstaculo('imagenes/valla_horizontal.png', 530, 210, 30, 30, 2),
-    new Obstaculo('imagenes/valla_vertical.png', 450, 450, 30, 30, 2),
-    new Obstaculo('imagenes/valla_vertical.png', 450, 480, 30, 30, 2),
+    new Obstaculo('imagenes/valla_vertical.png', 420, 390, 30, 30, 2),
+    new Obstaculo('imagenes/valla_vertical.png', 420, 420, 30, 30, 2),
     new Obstaculo('imagenes/valla_vertical.png', 300, 240, 30, 30, 2),
     new Obstaculo('imagenes/valla_vertical.png', 730, 130, 30, 30, 2),
-    new Obstaculo('imagenes/bache.png', 100, 280, 30, 30, 1),
-    new Obstaculo('imagenes/bache.png', 300, 400, 30, 30, 1),
+    new Obstaculo('imagenes/bache.png', 70, 280, 30, 30, 1),
+    new Obstaculo('imagenes/bache.png', 300, 380, 30, 30, 1),
     new Obstaculo('imagenes/bache.png', 430, 80, 30, 30, 1),
     new Obstaculo('imagenes/bache.png', 850, 400, 30, 30, 1),
     new Obstaculo('imagenes/auto_verde_abajo.png', 180, 230, 15, 30, 3),
@@ -64,13 +64,13 @@ var Juego = {
   ],
   // Los enemigos se agregaran en este arreglo.
   enemigos: [
-    new ZombieCaminante('imagenes/zombie4.png', 350, 430, 10, 10, 1,{desdeX: 50,hastaX:100,desdeY:50,hastaY:100}),
-    //new ZombieCaminante('imagenes/zombie4.png', 230, 540, 10, 10, 2,{desdeX: 60,hastaX: 120, desdeY: 60, hastaY: 120}),
-    //new ZombieCaminante('imagenes/zombie4.png', 120, 240, 10, 10, 2,{desdeX: 70,hastaX: 130, desdeY: 70, hastaY: 130}),
-    //new ZombieCaminante('imagenes/zombie4.png', 50, 350, 10, 10, 3,{desdeX: 80,hastaX: 140, desdeY: 80, hastaY: 140}),
-    //new ZombieCaminante('imagenes/zombie4.png', 70, 550, 10, 10, 3,{desdeX: 90,hastaX: 150, desdeY: 90, hastaY: 150}),
-    //new ZombieConductor('imagenes/zombie4.png', 644, 0, 30, 90, 3,{desdeX: 0,hastaX: 644, desdeY: 0, hastaY: 150},"vertical"),
-    //new ZombieConductor('imagenes/zombie4.png', 678, 0, 30, 90, 3,{desdeX: 0,hastaX: 644, desdeY: 0, hastaY: 150},"vertical"),
+    new ZombieCaminante('imagenes/zombie4.png', 900, 450, 10, 10, 1,{desdeX:0,hastaX:900,desdeY:450,hastaY:460}),
+    new ZombieCaminante('imagenes/zombie4.png', 895, 455, 10, 10, 1,{desdeX:0,hastaX:900,desdeY:455,hastaY:465}),
+    new ZombieCaminante('imagenes/zombie4.png', 890, 460, 10, 10, 1,{desdeX:0,hastaX:900,desdeY:460,hastaY:470}),
+    new ZombieCaminante('imagenes/zombie4.png', 900, 230, 10, 10, 2,{desdeX:0,hastaX:900, desdeY:230, hastaY:260}),
+    new ZombieCaminante('imagenes/zombie4.png', 895, 235, 10, 10, 2,{desdeX:0,hastaX:900, desdeY:235, hastaY:265}),
+    new ZombieCaminante('imagenes/zombie4.png', 890, 240, 10, 10, 2,{desdeX:0,hastaX:900, desdeY:240, hastaY:270}),
+    new ZombieConductor('imagenes/tren_horizontal.png', 400, 322, 90, 30, 2,{desdeX:0,hastaX: 900, desdeY: 322, hastaY: 322},"h"),
     //new ZombieConductor('imagenes/zombie4.png', 400, 322, 90, 30, 3,{desdeX: 0,hastaX: 400, desdeY: 0, hastaY: 322},"horizontal")
   ]
 }
@@ -218,7 +218,7 @@ un recorrido por los enemigos para dibujarlos en pantalla ahora habra que hacer
 una funcionalidad similar pero para que se muevan.*/
 Juego.moverEnemigos = function() {
   this.enemigos.forEach(function(enemigo) {
-    ZombieCaminante.prototype.mover();
+    enemigo.mover();
   });
 };
 
